@@ -15,7 +15,7 @@ public class SpringBootJerseyRxConfiguration {
     @Bean
     MongoClient mongoClient() {
         final String host = System.getenv("MONGO_HOST");
-        return MongoClients.create("mongodb://" + (host != null && !host.equals("") : host : "127.0.0.1"));
+        return MongoClients.create("mongodb://" + (host != null && !host.equals("") ? host : "127.0.0.1"));
     }
 
 }
