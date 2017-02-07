@@ -1,4 +1,4 @@
-package com.boot.spring.person;
+package com.boot.spring;
 
 import com.mongodb.async.SingleResultCallback;
 import com.mongodb.async.client.MongoClient;

@@ -25,12 +25,18 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    springBootVersion = '1.4.3.RELEASE'
+    rxJavaVersion = '1.1.6'
+    mongoDbAsyncDriverVersion = '3.0.4'
+}
 
 dependencies {
-    compile('io.reactivex:rxjava:1.1.6')
-    compile('org.mongodb:mongodb-driver-async:3.0.4')
-    compile('org.springframework.boot:spring-boot-starter-actuator')
-    compile("org.springframework.boot:spring-boot-starter-jersey")
-    compile('org.springframework.boot:spring-boot-starter')
-    testCompile('org.springframework.boot:spring-boot-starter-test')
+    compile("io.reactivex:rxjava:${rxJavaVersion}")
+    compile("org.mongodb:mongodb-driver-async:${mongoDbAsyncDriverVersion}")
+    compile("org.springframework.boot:spring-boot-starter-jetty:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-jersey:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter:${springBootVersion}")
+    testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
 }

@@ -1,4 +1,4 @@
-package com.boot.spring.person;
+package com.boot.spring;
 
 import org.bson.Document;
 
